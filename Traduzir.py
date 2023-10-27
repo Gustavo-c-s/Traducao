@@ -26,9 +26,11 @@ try:
     # Informar ao usuário o idioma detectadose
     print(f'Idioma Detectado: {detectar}')
 
-
+    #Escolha do indioma
+    idioma = input('Qual para qual idioma você quer traduzir? exemplo:en, pt-BR, fr, es,...')
+    
     # Traduzir para o português
-    traduz = Translator(from_lang=detectar, to_lang='pt-br')
+    traduz = Translator(from_lang=detectar, to_lang=idioma)
     traducao = traduz.translate(texto)
     print(traduz)
     print('Texto original:', texto)
